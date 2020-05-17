@@ -23,6 +23,8 @@ namespace WPTDesktop
         private void Form1_Load(object sender, EventArgs e)
         {
             int organisationID = 1; //samo za test
+
+            //pod References /AddService Reference/ Advanced /Ad web reference/dodati URL web servisa
             string printersList = proxy.GetPrinters(organisationID);
             DataTable dtPrinters = new DataTable();
 
