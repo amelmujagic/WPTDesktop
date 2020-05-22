@@ -25,7 +25,7 @@ namespace WPTDesktop
             int organisationID = 1; //samo za test
 
             //pod References /AddService Reference/ Advanced /Ad web reference/dodati URL web servisa
-            string printersList = proxy.GetPrinters(organisationID);
+            string printersList = proxy.GetOrganizationPrinters(organisationID);
             DataTable dtPrinters = new DataTable();
 
             //Dodan package Microsoft.AspNet.WebApi.Client za json
@@ -43,6 +43,8 @@ namespace WPTDesktop
         private void buttonLogin_Click(object sender, EventArgs e)
         {
             this.Hide();
+
+            
             Main main = new Main();
             main.Show();
         }

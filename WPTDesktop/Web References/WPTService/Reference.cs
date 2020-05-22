@@ -23,7 +23,7 @@ namespace WPTDesktop.WPTService {
     
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3062.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Web.Services.WebServiceBindingAttribute(Name="WebServiceSoap", Namespace="http://tempuri.org/")]
@@ -35,7 +35,7 @@ namespace WPTDesktop.WPTService {
         
         private System.Threading.SendOrPostCallback LoginOperationCompleted;
         
-        private System.Threading.SendOrPostCallback GetPrintersOperationCompleted;
+        private System.Threading.SendOrPostCallback GetOrganizationPrintersOperationCompleted;
         
         private System.Threading.SendOrPostCallback RequestServiceOperationCompleted;
         
@@ -89,7 +89,7 @@ namespace WPTDesktop.WPTService {
         public event LoginCompletedEventHandler LoginCompleted;
         
         /// <remarks/>
-        public event GetPrintersCompletedEventHandler GetPrintersCompleted;
+        public event GetOrganizationPrintersCompletedEventHandler GetOrganizationPrintersCompleted;
         
         /// <remarks/>
         public event RequestServiceCompletedEventHandler RequestServiceCompleted;
@@ -187,31 +187,31 @@ namespace WPTDesktop.WPTService {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/GetPrinters", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public string GetPrinters(int organisationID) {
-            object[] results = this.Invoke("GetPrinters", new object[] {
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/GetOrganizationPrinters", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string GetOrganizationPrinters(int organisationID) {
+            object[] results = this.Invoke("GetOrganizationPrinters", new object[] {
                         organisationID});
             return ((string)(results[0]));
         }
         
         /// <remarks/>
-        public void GetPrintersAsync(int organisationID) {
-            this.GetPrintersAsync(organisationID, null);
+        public void GetOrganizationPrintersAsync(int organisationID) {
+            this.GetOrganizationPrintersAsync(organisationID, null);
         }
         
         /// <remarks/>
-        public void GetPrintersAsync(int organisationID, object userState) {
-            if ((this.GetPrintersOperationCompleted == null)) {
-                this.GetPrintersOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetPrintersOperationCompleted);
+        public void GetOrganizationPrintersAsync(int organisationID, object userState) {
+            if ((this.GetOrganizationPrintersOperationCompleted == null)) {
+                this.GetOrganizationPrintersOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetOrganizationPrintersOperationCompleted);
             }
-            this.InvokeAsync("GetPrinters", new object[] {
-                        organisationID}, this.GetPrintersOperationCompleted, userState);
+            this.InvokeAsync("GetOrganizationPrinters", new object[] {
+                        organisationID}, this.GetOrganizationPrintersOperationCompleted, userState);
         }
         
-        private void OnGetPrintersOperationCompleted(object arg) {
-            if ((this.GetPrintersCompleted != null)) {
+        private void OnGetOrganizationPrintersOperationCompleted(object arg) {
+            if ((this.GetOrganizationPrintersCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.GetPrintersCompleted(this, new GetPrintersCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+                this.GetOrganizationPrintersCompleted(this, new GetOrganizationPrintersCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -295,11 +295,11 @@ namespace WPTDesktop.WPTService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3062.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void HelloWorldCompletedEventHandler(object sender, HelloWorldCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3062.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class HelloWorldCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -321,11 +321,11 @@ namespace WPTDesktop.WPTService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3062.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void SignUpCompletedEventHandler(object sender, SignUpCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3062.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class SignUpCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -347,11 +347,11 @@ namespace WPTDesktop.WPTService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3062.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void LoginCompletedEventHandler(object sender, LoginCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3062.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class LoginCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -373,18 +373,18 @@ namespace WPTDesktop.WPTService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3062.0")]
-    public delegate void GetPrintersCompletedEventHandler(object sender, GetPrintersCompletedEventArgs e);
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void GetOrganizationPrintersCompletedEventHandler(object sender, GetOrganizationPrintersCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3062.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class GetPrintersCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+    public partial class GetOrganizationPrintersCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
         
         private object[] results;
         
-        internal GetPrintersCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+        internal GetOrganizationPrintersCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }
@@ -399,11 +399,11 @@ namespace WPTDesktop.WPTService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3062.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void RequestServiceCompletedEventHandler(object sender, RequestServiceCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3062.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class RequestServiceCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -425,11 +425,11 @@ namespace WPTDesktop.WPTService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3062.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void checkForServiceReportsCompletedEventHandler(object sender, checkForServiceReportsCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3062.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class checkForServiceReportsCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
